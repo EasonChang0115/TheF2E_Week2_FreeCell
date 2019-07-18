@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <transition name="fadeOut"><LoadingPage v-if="showLoading"/></transition>
     <div class="main">
+      <transition name="fadeOut"><LoadingPage v-if="showLoading"/></transition>
       <Header />
       <div class="top_slot">
         <FreeSlot />
