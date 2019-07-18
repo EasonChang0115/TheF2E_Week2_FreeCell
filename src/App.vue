@@ -3,6 +3,7 @@
     <transition name="fadeOut"><LoadingPage v-if="showLoading"/></transition>
     <div class="main">
       <Header />
+
     </div>
     <div class="slide"><RightToolsBar /></div>
   </div>
