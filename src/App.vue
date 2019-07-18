@@ -8,7 +8,7 @@
         <TargetSlot />
       </div>
       <div class="bottom_slot">
-        <CardSlot />
+        <CardSlotList />
       </div>
     </div>
     <div class="slide" :class="{open: !showLoading}"><RightToolsBar /></div>
@@ -20,7 +20,7 @@ import RightToolsBar from '@/components/RightToolsBar.vue';
 import Header from '@/components/Header.vue';
 import FreeSlot from '@/components/FreeSlot.vue';
 import TargetSlot from '@/components/TargetSlot.vue';
-import CardSlot from '@/components/CardSlot.vue';
+import CardSlotList from '@/components/CardSlotList.vue';
 
 export default {
   mounted() {
@@ -34,7 +34,7 @@ export default {
     RightToolsBar,
     FreeSlot,
     TargetSlot,
-    CardSlot
+    CardSlotList
   },
   data() {
     return {

@@ -85,7 +85,9 @@ export default new Vuex.Store({
     ]
   },
   mutations: {
-
+    updateBottomPokeSlots(state, {value, key}) {
+      state.bottomPokeSlots[key].cards = value;
+    }
   },
   actions: {
 
