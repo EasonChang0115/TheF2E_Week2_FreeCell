@@ -34,7 +34,7 @@ header.my-header {
   }
   .information-panel {
     display: flex;
-    padding-top: 16px;
+    padding-top: 20px;
     .time-clock {
       margin-right: 6rem;
       display: flex;
