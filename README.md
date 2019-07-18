@@ -1,4 +1,4 @@
-# freecall
+# freecell
 
 ## Project setup
 ```
