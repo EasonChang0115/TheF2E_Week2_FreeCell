@@ -11,7 +11,7 @@
         <CardSlot />
       </div>
     </div>
-    <div class="slide"><RightToolsBar /></div>
+    <div class="slide" :class="{open: !showLoading}"><RightToolsBar /></div>
   </div>
 </template>
 <script>
@@ -24,9 +24,9 @@ import CardSlot from '@/components/CardSlot.vue';
 
 export default {
   mounted() {
-    // setTimeout(() => {
-    //   this.showLoading = false;
-    // });
+    setTimeout(() => {
+      this.showLoading = false;
+    });
   },
   components: {
     Header,
@@ -38,7 +38,7 @@ export default {
   },
   data() {
     return {
-      showLoading: false,
+      showLoading: true,
       pokeCards: [
         {
           id: 0,
@@ -58,6 +58,8 @@ export default {
   background: rgb(82,82,82);
   background: linear-gradient(180deg, rgba(82,82,82,1) 0%, rgba(0,31,29,1) 100%);
   display: flex;
+  overflow: hidden;
+  padding-right: 105px;
   .main {
     width: calc(100% - 105px);
     max-width: 1160px;
@@ -70,6 +72,14 @@ export default {
     background-color: #001F1D;
     width: 105px;
     height: 100%;
+    position: absolute;
+    right: -105px;
+    top: 0;
+    transition: 1s;
+    transition-delay: 1.5s;
+    &.open {
+      right: 0;
+    }
   }
   .top_slot {
     margin-top: 1rem;

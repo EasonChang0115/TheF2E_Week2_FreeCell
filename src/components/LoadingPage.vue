@@ -23,6 +23,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    animation: zoomToLeftTop 1.6s ease-in-out;
+    animation-delay: 1s;
     .logo {
       width: 100%;
       height: 100%;
