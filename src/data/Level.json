@@ -1,0 +1,946 @@
+{
+  "LevelList": {
+    "LevelOne": {
+      "name": "LEVEL 1",
+      "image": "https://images.unsplash.com/photo-1453743327117-664e2bf4e951?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      "slots":[
+        {
+          "name": "slot1",
+          "cards": [
+            {
+              "id": "diamond_4",
+              "number": 4,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "club_7",
+              "number": 7,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "diamond_7",
+              "number": 7,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "diamond_13",
+              "number": 13,
+              "color": "black",
+              "flower": "diamond"
+            }, {
+              "id": "club_9",
+              "number": 9,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "diamond_1",
+              "number": 1,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "diamond_8",
+              "number": 8,
+              "color": "red",
+              "flower": "diamond"
+            }
+          ]
+        },
+        {
+          "name": "slot2",
+          "cards": [
+            {
+              "id": "spade_4",
+              "number": 4,
+              "color": "black",
+              "flower": "spade"
+            }, {
+              "id": "heart_8",
+              "number": 8,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "diamond_9",
+              "number": 9,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "spade_1",
+              "number": 1,
+              "color": "black",
+              "flower": "spade"
+            }, {
+              "id": "club_4",
+              "number": 4,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "spade_10",
+              "number": 10,
+              "color": "black",
+              "flower": "spade"
+            }, {
+              "id": "club_12",
+              "number": 12,
+              "color": "black",
+              "flower": "club"
+            }
+          ]
+        },
+        {
+          "name": "slot3",
+          "cards": [
+            {
+              "id": "club_3",
+              "number": 3,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "spade_12",
+              "number": 12,
+              "color": "black",
+              "flower": "spade"
+            }, {
+              "id": "heart_10",
+              "number": 10,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "heart_11",
+              "number": 11,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "heart_9",
+              "number": 9,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "club_2",
+              "number": 2,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "spade_13",
+              "number": 13,
+              "color": "black",
+              "flower": "spade"
+            }
+          ]
+        },
+        {
+          "name": "slot4",
+          "cards": [
+            {
+              "id": "heart_1",
+              "number": 1,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "diamond_10",
+              "number": 10,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "diamond_11",
+              "number": 11,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "heart_6",
+              "number": 6,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "club_8",
+              "number": 8,
+              "color": "black",
+              "flower": "club"
+            },{
+              "id": "club_10",
+              "number": 10,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "spade_9",
+              "number": 9,
+              "color": "black",
+              "flower": "spade"
+            }
+          ]
+        },
+        {
+          "name": "slot5",
+          "cards": [
+            {
+              "id": "club_11",
+              "number": 11,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "spade_11",
+              "number": 11,
+              "color": "black",
+              "flower": "spade"
+            }, {
+              "id": "spade_8",
+              "number": 8,
+              "color": "black",
+              "flower": "spade"
+            }, {
+              "id": "heart_5",
+              "number": 5,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "heart_12",
+              "number": 12,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "spade_3",
+              "number": 3,
+              "color": "black",
+              "flower": "spade"
+            }
+          ]
+        },
+        {
+          "name": "slot6",
+          "cards": [
+            {
+              "id": "diamond_3",
+              "number": 3,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "diamond_5",
+              "number": 5,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "diamond_12",
+              "number": 12,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "heart_7",
+              "number": 7,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "heart_4",
+              "number": 4,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "spade_5",
+              "number": 5,
+              "color": "black",
+              "flower": "spade"
+            }
+          ]
+        },
+        {
+          "name": "slot7",
+          "cards": [
+            {
+              "id": "club_6",
+              "number": 6,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "diamond_2",
+              "number": 2,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "spade_6",
+              "number": 6,
+              "color": "black",
+              "flower": "spade"
+            }, {
+              "id": "club_1",
+              "number": 1,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "heart_13",
+              "number": 13,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "club_5",
+              "number": 5,
+              "color": "black",
+              "flower": "club"
+            }
+          ]
+        },
+        {
+          "name": "slot8",
+          "cards": [
+            {
+              "id": "spade_7",
+              "number": 7,
+              "color": "black",
+              "flower": "spade"
+            }, {
+              "id": "heart_2",
+              "number": 2,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "diamond_6",
+              "number": 6,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "club_13",
+              "number": 13,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "spade_2",
+              "number": 2,
+              "color": "black",
+              "flower": "spade"
+            }, {
+              "id": "heart_3",
+              "number": 3,
+              "color": "red",
+              "flower": "heart"
+            }
+          ]
+        }
+      ]
+    },
+    "LevelTwo": {
+      "name": "LEVEL 2",
+      "image": "https://images.unsplash.com/photo-1416138645715-930585fe4ce2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      "slots":[
+        {
+          "name": "slot1",
+          "cards": [
+            {
+              "id": "diamond_4",
+              "number": 4,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "club_7",
+              "number": 7,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "diamond_7",
+              "number": 7,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "diamond_13",
+              "number": 13,
+              "color": "black",
+              "flower": "diamond"
+            }, {
+              "id": "club_9",
+              "number": 9,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "diamond_1",
+              "number": 1,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "diamond_8",
+              "number": 8,
+              "color": "red",
+              "flower": "diamond"
+            }
+          ]
+        },
+        {
+          "name": "slot2",
+          "cards": [
+            {
+              "id": "spade_4",
+              "number": 4,
+              "color": "black",
+              "flower": "spade"
+            }, {
+              "id": "heart_8",
+              "number": 8,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "diamond_9",
+              "number": 9,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "spade_1",
+              "number": 1,
+              "color": "black",
+              "flower": "spade"
+            }, {
+              "id": "club_4",
+              "number": 4,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "spade_10",
+              "number": 10,
+              "color": "black",
+              "flower": "spade"
+            }, {
+              "id": "club_12",
+              "number": 12,
+              "color": "black",
+              "flower": "club"
+            }
+          ]
+        },
+        {
+          "name": "slot3",
+          "cards": [
+            {
+              "id": "club_3",
+              "number": 3,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "spade_12",
+              "number": 12,
+              "color": "black",
+              "flower": "spade"
+            }, {
+              "id": "heart_10",
+              "number": 10,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "heart_11",
+              "number": 11,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "heart_9",
+              "number": 9,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "club_2",
+              "number": 2,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "spade_13",
+              "number": 13,
+              "color": "black",
+              "flower": "spade"
+            }
+          ]
+        },
+        {
+          "name": "slot4",
+          "cards": [
+            {
+              "id": "heart_1",
+              "number": 1,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "diamond_10",
+              "number": 10,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "diamond_11",
+              "number": 11,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "heart_6",
+              "number": 6,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "club_8",
+              "number": 8,
+              "color": "black",
+              "flower": "club"
+            },{
+              "id": "club_10",
+              "number": 10,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "spade_9",
+              "number": 9,
+              "color": "black",
+              "flower": "spade"
+            }
+          ]
+        },
+        {
+          "name": "slot5",
+          "cards": [
+            {
+              "id": "club_11",
+              "number": 11,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "spade_11",
+              "number": 11,
+              "color": "black",
+              "flower": "spade"
+            }, {
+              "id": "spade_8",
+              "number": 8,
+              "color": "black",
+              "flower": "spade"
+            }, {
+              "id": "heart_5",
+              "number": 5,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "heart_12",
+              "number": 12,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "spade_3",
+              "number": 3,
+              "color": "black",
+              "flower": "spade"
+            }
+          ]
+        },
+        {
+          "name": "slot6",
+          "cards": [
+            {
+              "id": "diamond_3",
+              "number": 3,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "diamond_5",
+              "number": 5,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "diamond_12",
+              "number": 12,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "heart_7",
+              "number": 7,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "heart_4",
+              "number": 4,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "spade_5",
+              "number": 5,
+              "color": "black",
+              "flower": "spade"
+            }
+          ]
+        },
+        {
+          "name": "slot7",
+          "cards": [
+            {
+              "id": "club_6",
+              "number": 6,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "diamond_2",
+              "number": 2,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "spade_6",
+              "number": 6,
+              "color": "black",
+              "flower": "spade"
+            }, {
+              "id": "club_1",
+              "number": 1,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "heart_13",
+              "number": 13,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "club_5",
+              "number": 5,
+              "color": "black",
+              "flower": "club"
+            }
+          ]
+        },
+        {
+          "name": "slot8",
+          "cards": [
+            {
+              "id": "spade_7",
+              "number": 7,
+              "color": "black",
+              "flower": "spade"
+            }, {
+              "id": "heart_2",
+              "number": 2,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "diamond_6",
+              "number": 6,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "club_13",
+              "number": 13,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "spade_2",
+              "number": 2,
+              "color": "black",
+              "flower": "spade"
+            }, {
+              "id": "heart_3",
+              "number": 3,
+              "color": "red",
+              "flower": "heart"
+            }
+          ]
+        }
+      ]
+    },
+    "LevelThree": {
+      "name": "LEVEL 3",
+      "image": "https://images.unsplash.com/photo-1416138645715-930585fe4ce2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      "slots":[
+        {
+          "name": "slot1",
+          "cards": [
+            {
+              "id": "diamond_4",
+              "number": 4,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "club_7",
+              "number": 7,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "diamond_7",
+              "number": 7,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "diamond_13",
+              "number": 13,
+              "color": "black",
+              "flower": "diamond"
+            }, {
+              "id": "club_9",
+              "number": 9,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "diamond_1",
+              "number": 1,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "diamond_8",
+              "number": 8,
+              "color": "red",
+              "flower": "diamond"
+            }
+          ]
+        },
+        {
+          "name": "slot2",
+          "cards": [
+            {
+              "id": "spade_4",
+              "number": 4,
+              "color": "black",
+              "flower": "spade"
+            }, {
+              "id": "heart_8",
+              "number": 8,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "diamond_9",
+              "number": 9,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "spade_1",
+              "number": 1,
+              "color": "black",
+              "flower": "spade"
+            }, {
+              "id": "club_4",
+              "number": 4,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "spade_10",
+              "number": 10,
+              "color": "black",
+              "flower": "spade"
+            }, {
+              "id": "club_12",
+              "number": 12,
+              "color": "black",
+              "flower": "club"
+            }
+          ]
+        },
+        {
+          "name": "slot3",
+          "cards": [
+            {
+              "id": "club_3",
+              "number": 3,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "spade_12",
+              "number": 12,
+              "color": "black",
+              "flower": "spade"
+            }, {
+              "id": "heart_10",
+              "number": 10,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "heart_11",
+              "number": 11,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "heart_9",
+              "number": 9,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "club_2",
+              "number": 2,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "spade_13",
+              "number": 13,
+              "color": "black",
+              "flower": "spade"
+            }
+          ]
+        },
+        {
+          "name": "slot4",
+          "cards": [
+            {
+              "id": "heart_1",
+              "number": 1,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "diamond_10",
+              "number": 10,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "diamond_11",
+              "number": 11,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "heart_6",
+              "number": 6,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "club_8",
+              "number": 8,
+              "color": "black",
+              "flower": "club"
+            },{
+              "id": "club_10",
+              "number": 10,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "spade_9",
+              "number": 9,
+              "color": "black",
+              "flower": "spade"
+            }
+          ]
+        },
+        {
+          "name": "slot5",
+          "cards": [
+            {
+              "id": "club_11",
+              "number": 11,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "spade_11",
+              "number": 11,
+              "color": "black",
+              "flower": "spade"
+            }, {
+              "id": "spade_8",
+              "number": 8,
+              "color": "black",
+              "flower": "spade"
+            }, {
+              "id": "heart_5",
+              "number": 5,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "heart_12",
+              "number": 12,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "spade_3",
+              "number": 3,
+              "color": "black",
+              "flower": "spade"
+            }
+          ]
+        },
+        {
+          "name": "slot6",
+          "cards": [
+            {
+              "id": "diamond_3",
+              "number": 3,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "diamond_5",
+              "number": 5,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "diamond_12",
+              "number": 12,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "heart_7",
+              "number": 7,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "heart_4",
+              "number": 4,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "spade_5",
+              "number": 5,
+              "color": "black",
+              "flower": "spade"
+            }
+          ]
+        },
+        {
+          "name": "slot7",
+          "cards": [
+            {
+              "id": "club_6",
+              "number": 6,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "diamond_2",
+              "number": 2,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "spade_6",
+              "number": 6,
+              "color": "black",
+              "flower": "spade"
+            }, {
+              "id": "club_1",
+              "number": 1,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "heart_13",
+              "number": 13,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "club_5",
+              "number": 5,
+              "color": "black",
+              "flower": "club"
+            }
+          ]
+        },
+        {
+          "name": "slot8",
+          "cards": [
+            {
+              "id": "spade_7",
+              "number": 7,
+              "color": "black",
+              "flower": "spade"
+            }, {
+              "id": "heart_2",
+              "number": 2,
+              "color": "red",
+              "flower": "heart"
+            }, {
+              "id": "diamond_6",
+              "number": 6,
+              "color": "red",
+              "flower": "diamond"
+            }, {
+              "id": "club_13",
+              "number": 13,
+              "color": "black",
+              "flower": "club"
+            }, {
+              "id": "spade_2",
+              "number": 2,
+              "color": "black",
+              "flower": "spade"
+            }, {
+              "id": "heart_3",
+              "number": 3,
+              "color": "red",
+              "flower": "heart"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,6 +1,6 @@
 <template>
   <ul class="right-tools-bar">
-    <li class="tool">
+    <li class="tool" @click="openSelectDialog">
       <i><img src="../assets/image/new.svg" width="100%" alt=""></i>
       <div class="text">NEW</div>
     </li>
@@ -17,7 +17,11 @@
 
 <script>
 export default {
-
+  methods: {
+    openSelectDialog() {
+      this.$bus.$emit('onOpenDialog', { dialogType: 'SelectLevelDialog' });
+    }
+  }
 };
 </script>
 

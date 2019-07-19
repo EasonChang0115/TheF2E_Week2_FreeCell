@@ -12,6 +12,9 @@
       </div>
     </div>
     <div class="slide" :class="{open: !showLoading}"><RightToolsBar /></div>
+    <transition name="fade">
+      <Dialog v-if="dialogOpen && dialogType.length !== 0" :type="dialogType"></Dialog>
+    </transition>
   </div>
 </template>
 <script>
@@ -21,6 +24,7 @@ import Header from '@/components/Header.vue';
 import FreeSlotList from '@/components/slot/FreeSlotList.vue';
 import TargetSlotList from '@/components/slot/TargetSlotList.vue';
 import CardSlotList from '@/components/slot/CardSlotList.vue';
+import Dialog from '@/components/Dialogs/Dialog.vue';
 
 export default {
   mounted() {
@@ -34,19 +38,28 @@ export default {
     RightToolsBar,
     FreeSlotList,
     TargetSlotList,
-    CardSlotList
+    CardSlotList,
+    Dialog
   },
   data() {
     return {
-      showLoading: true,
-      pokeCards: [
-        {
-          id: 0,
-          number: 1,
-          color: 'pitch'
-        }
-      ]
+      dialogOpen: true,
+      dialogType: '',
+      showLoading: true
     };
+  },
+  created() {
+    this.$bus.$on('onOpenDialog', ({ dialogType }) => {
+      this.dialogOpen = true;
+      this.dialogType = dialogType;
+    });
+    this.$bus.$on('closeDialog', () => {
+      this.dialogOpen = false;
+    });
+  },
+  destroyed() {
+    this.$bus.$off('onOpenDialog');
+    this.$bus.$off('closeDialog');
   }
 };
 </script>
