@@ -5,9 +5,15 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    pokeCards: [],
     freeSlots: [{
         name: 'free1',
-        cards: []
+        cards: [{
+          id: 'spade_5',
+          number: '5',
+          color: 'black',
+          flower: 'spade'
+        }]
       }, {
         name: 'free2',
         cards: []
@@ -20,7 +26,12 @@ export default new Vuex.Store({
     }],
     targetSlots: [{
         name: 'target1',
-        cards: []
+        cards: [{
+          id: 'spade_1',
+          number: '1',
+          color: 'black',
+          flower: 'spade'
+        }]
       }, {
         name: 'target2',
         cards: []
@@ -33,7 +44,17 @@ export default new Vuex.Store({
     }],
     bottomPokeSlots: [{
         name: 'slot1',
-        cards: []
+        cards: [{
+          id: 'spade_2',
+          number: '2',
+          color: 'black',
+          flower: 'spade'
+        }, {
+          id: 'spade_4',
+          number: '4',
+          color: 'black',
+          flower: 'spade'
+        }]
       }, {
         name: 'slot2',
         cards: []
@@ -45,7 +66,12 @@ export default new Vuex.Store({
         cards: []
       }, {
         name: 'slot5',
-        cards: []
+        cards: [{
+          id: 'spade_3',
+          number: '3',
+          color: 'black',
+          flower: 'spade'
+        }]
       }, {
         name: 'slot6',
         cards: []
@@ -59,7 +85,9 @@ export default new Vuex.Store({
     ]
   },
   mutations: {
-
+    updateBottomPokeSlots(state, {value, key}) {
+      state.bottomPokeSlots[key].cards = value;
+    }
   },
   actions: {
 
