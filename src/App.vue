@@ -4,8 +4,8 @@
       <transition name="fadeOut"><LoadingPage v-if="showLoading"/></transition>
       <Header />
       <div class="top_slot">
-        <FreeSlot />
-        <TargetSlot />
+        <FreeSlotList />
+        <TargetSlotList />
       </div>
       <div class="bottom_slot">
         <CardSlotList />
@@ -18,9 +18,9 @@
 import LoadingPage from '@/components/LoadingPage.vue';
 import RightToolsBar from '@/components/RightToolsBar.vue';
 import Header from '@/components/Header.vue';
-import FreeSlot from '@/components/FreeSlot.vue';
-import TargetSlot from '@/components/TargetSlot.vue';
-import CardSlotList from '@/components/CardSlotList.vue';
+import FreeSlotList from '@/components/slot/FreeSlotList.vue';
+import TargetSlotList from '@/components/slot/TargetSlotList.vue';
+import CardSlotList from '@/components/slot/CardSlotList.vue';
 
 export default {
   mounted() {
@@ -32,8 +32,8 @@ export default {
     Header,
     LoadingPage,
     RightToolsBar,
-    FreeSlot,
-    TargetSlot,
+    FreeSlotList,
+    TargetSlotList,
     CardSlotList
   },
   data() {

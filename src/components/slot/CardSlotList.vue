@@ -1,18 +1,18 @@
 <template>
   <div class="poke_card_slot_panel">
-    <CardSlot v-for="(slot, key, index) in bottomPokeSlots" :key="index" :slotData="slot" :name="key"></CardSlot>
+    <CardSlot v-for="(slot, index) in slots.bottomPokeSlots" :key="index" :slotData="slot" :name="slot.name"></CardSlot>
   </div>
 </template>
 
 <script>
 import { mapState } from 'vuex';
-import CardSlot from '@/components/CardSlot.vue';
+import CardSlot from '@/components/slot/CardSlot.vue';
 export default {
   components: {
     CardSlot
   },
   computed: {
-    ...mapState(['bottomPokeSlots'])
+    ...mapState(['slots'])
   },
   methods: {
     slotHeight(slot) {

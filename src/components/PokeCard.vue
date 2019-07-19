@@ -29,6 +29,8 @@ export default {
   top: 0;
   left: 0;
   transition: .3s;
+
+  cursor: pointer;
   &.ghost {
     opacity: 0.4;
   }
