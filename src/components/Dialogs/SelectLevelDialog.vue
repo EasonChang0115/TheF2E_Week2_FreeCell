@@ -18,8 +18,8 @@
       </ul>
     </div>
     <div class="button-group">
-      <button class="confirmBtn">Selected This Level</button>
-      <button class="cancelBtn" @click="$bus.$emit('closeDialog');">Back</button>
+      <button class="confirmBtn" @click="onSelectedLevel">Selected This Level</button>
+      <button class="cancelBtn" @click="$bus.$emit('closeDialog')">Back</button>
     </div>
   </div>
 </template>
@@ -31,6 +31,12 @@ export default {
     return {
       LevelList: LevelList.LevelList,
       selectedLevel: null
+    };
+  },
+  methods: {
+    onSelectedLevel() {
+      this.$store.commit('loadLevelInbottomPokeSlots', { levelData: this.LevelList[this.selectedLevel].slots });
+      this.$bus.$emit('closeDialog');
     }
   }
 };
