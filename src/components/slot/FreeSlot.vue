@@ -34,8 +34,9 @@ export default {
     getOptions() {
       return {
         animation: 150,
-        group: 'description',
-        ghostClass: 'ghost'
+        group: 'cardSlot',
+        ghostClass: 'ghost',
+        sort: false
       };
     }
   }

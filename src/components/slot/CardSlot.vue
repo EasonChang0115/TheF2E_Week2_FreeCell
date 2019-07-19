@@ -3,6 +3,8 @@
       v-bind="getOptions()"
       :style="{ height: slotHeight + 'px' }"
       v-model="cardLists"
+      @end="onEnd"
+      :move="onMove"
   >
     <PokeCard v-for="(card, cindex) in slotData.cards" :key="card.id" :cardData="card" :top="cindex * 35"/>
   </draggable>
@@ -16,9 +18,6 @@ export default {
   components: {
     PokeCard,
     draggable
-  },
-  mounted() {
-    this.viewCardHeightPosition();
   },
   computed: {
     slotHeight() {
@@ -42,22 +41,25 @@ export default {
     getOptions() {
       return {
         animation: 150,
-        group: 'description',
-        ghostClass: 'ghost'
+        group: 'cardSlot',
+        ghostClass: 'ghost',
+        sort: false,
+        onEnd: this.onEnd
       };
     },
-    // 當 slot 被 dragover 時，需要重新計算預設牌的高度
-    viewCardHeightPosition() {
-      let targetAll = document.querySelectorAll('.card_slot');
-      targetAll.forEach(target => target.addEventListener('dragover', function() {
-        let childNodesLength = this.childNodes.length;
-        this.childNodes.forEach(child => {
-          if (child.className.includes('ghost')) {
-            if (childNodesLength === 1 || childNodesLength === 0) child.style.top = '0px';
-            else child.style.top = (childNodesLength - 1) * 35 + 'px';
-          }
-        });
-      }));
+    onEnd(option) {
+      // console.log('End');
+      // console.log(option);
+    },
+    onMove(option) {
+      console.log('Move');
+      console.log(option);
+      let dragged = option.dragged;
+      // 如果是目標則重新計算高度
+      if (option.to.className.includes('card_slot')) {
+        let targetSlotListNum = option.relatedContext.list.length;
+        dragged.style.top = targetSlotListNum * 35 + 'px';
+      }
     }
   }
 };
