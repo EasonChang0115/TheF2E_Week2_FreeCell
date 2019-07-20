@@ -111,6 +111,7 @@ export default new Vuex.Store({
         }
       ]
     },
+    isStarted: false,
     time: 0,
     moveTimes: 0
   },
@@ -180,6 +181,9 @@ export default new Vuex.Store({
     },
     setTime(state, { value }) {
       state.time = value;
+    },
+    toggleStart(state, { value }) {
+      state.isStarted = value;
     }
   },
   actions: {

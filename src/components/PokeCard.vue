@@ -8,7 +8,7 @@
     :data-fixed="cardData.fixed"
     :style="{
       backgroundImage: `url('${ imgUrl }')`,
-      top: mytop + 'px',
+      top: isStarted ? mytop + 'px' : '0px',
     }"
     v-bind="getOptions()"
     :list="cardData.childElement"
@@ -90,6 +90,9 @@ export default {
     },
     realValue() {
       return this.value ? this.value : this.cardData.childElement;
+    },
+    isStarted() {
+      return this.$store.state.isStarted;
     }
   }
 };
@@ -107,8 +110,10 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  transition: .3s;
-
+  transition: 1.5s;
+  &.started {
+    transition: .3s;
+  }
   cursor: pointer;
   &.ghost {
     opacity: 0;

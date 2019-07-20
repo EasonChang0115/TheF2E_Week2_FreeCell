@@ -7,7 +7,7 @@
       @end="onEnd"
       :move="onMove"
   >
-    <PokeCard v-for="(card, cindex) in slotData.cards" :key="card.id" :cardData="card" :top="myTop(cindex) * 35" :position="'bottom'" />
+    <PokeCard v-for="(card, cindex) in slotData.cards" :key="card.id" :cardData="card" :top="myTop(cindex) * 35" :position="'bottom'" :className="className"/>
   </draggable>
 </template>
 
@@ -37,6 +37,10 @@ export default {
           name: this.name
         });
       }
+    },
+    className() {
+      if (this.$store.state.time > 0) return 'poke_card started';
+      else 'poke_card'
     }
   },
   methods: {

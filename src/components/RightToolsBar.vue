@@ -19,7 +19,7 @@
 export default {
   computed: {
     isStarted() {
-      return this.$store.state.time > 0;
+      return this.$store.state.isStarted;
     },
     moved() {
       return this.$store.state.moveTimes > 0;
