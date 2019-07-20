@@ -6,7 +6,7 @@
       @end="onEnd"
       :move="onMove"
   >
-    <PokeCard v-for="card in slotData.cards" :key="card.id" :cardData="card" />
+    <PokeCard v-for="card in slotData.cards" :key="card.id" :cardData="card" :position="'free'"/>
   </draggable>
 </template>
 

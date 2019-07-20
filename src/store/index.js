@@ -63,44 +63,20 @@ export default new Vuex.Store({
     slots: {
       freeSlots: [{
           name: 'free1',
-          cards: [{
-            id: 'spade_5',
-            number: '5',
-            color: 'black',
-            flower: 'spade',
-            childElement: []
-          }]
+          cards: []
         }, {
           name: 'free2',
-          cards: [{
-            id: 'spade_2',
-            number: '2',
-            color: 'black',
-            flower: 'spade',
-            childElement: []
-          }]
+          cards: []
         }, {
           name: 'free3',
-          cards: [ {
-            id: 'heart_5',
-            number: '5',
-            color: 'red',
-            flower: 'heart',
-            childElement: []
-          }]
+          cards: []
         }, {
           name: 'free4',
           cards: []
       }],
       targetSlots: [{
           name: 'target1',
-          cards: [{
-            id: 'spade_1',
-            number: '1',
-            color: 'black',
-            flower: 'spade',
-            childElement: []
-          }]
+          cards: []
         }, {
           name: 'target2',
           cards: []
@@ -113,58 +89,19 @@ export default new Vuex.Store({
       }],
       bottomPokeSlots: [{
           name: 'slot1',
-          cards: [{
-            id: 'spade_4',
-            number: '4',
-            color: 'black',
-            flower: 'spade',
-            childElement: []
-          },  {
-            id: 'heart_3',
-            number: '3',
-            color: 'red',
-            flower: 'heart',
-            childElement: []
-          }]
+          cards: []
         }, {
           name: 'slot2',
           cards: []
         }, {
           name: 'slot3',
-          cards: [{
-            id: 'heart_4',
-            number: '4',
-            color: 'red',
-            flower: 'heart',
-            childElement: [{
-              id: 'heart_1',
-              number: '1',
-              color: 'red',
-              flower: 'heart',
-              childElement: []
-            }]
-          }]
+          cards: []
         }, {
           name: 'slot4',
           cards: []
         }, {
           name: 'slot5',
-          cards: [{
-            id: 'spade_3',
-            number: '3',
-            color: 'black',
-            flower: 'spade',
-            childElement: []
-          }]
-        }, {
-          name: 'slot6',
-          cards: [{
-            id: 'heart_2',
-            number: '2',
-            color: 'red',
-            flower: 'heart',
-            childElement: []
-          }]
+          cards: []
         }, {
           name: 'slot7',
           cards: []

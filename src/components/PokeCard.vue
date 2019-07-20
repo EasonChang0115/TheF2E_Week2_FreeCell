@@ -1,5 +1,12 @@
 <template>
-  <draggable element="div" :class="className" :style="{
+  <draggable element="div" 
+    :class="className" 
+    :data-number="cardData.number" 
+    :data-color="cardData.color"
+    :data-flower="cardData.flower"
+    :data-position="position"
+    :data-fixed="cardData.fixed"
+    :style="{
       backgroundImage: `url('${ imgUrl }')`,
       top: mytop + 'px',
     }"
@@ -17,6 +24,7 @@
       :className="'poke_card sub_card'"
       :cardData="card"
       :isSub="true"
+      :position="position"
       >
     </PokeCard>
   </draggable>
@@ -28,6 +36,9 @@ import draggleFunction from '@/mixin/dragFunction.js';
 export default {
   name: "PokeCard",
   props: {
+    position: {
+      required: false
+    },
     className: {
       required: false,
       default: 'poke_card'
@@ -70,7 +81,8 @@ export default {
   },
   computed: {
     mytop() {
-      if (this.isSub === false) return this.top;
+      if (this.position === 'target') return 0;
+      else if (this.isSub === false) return this.top;
       else return 35;
     },
     imgUrl() {
@@ -99,7 +111,7 @@ export default {
 
   cursor: pointer;
   &.ghost {
-    opacity: 0.4;
+    opacity: 0;
   }
 }
 </style>

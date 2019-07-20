@@ -7,7 +7,7 @@
       @end="onEnd"
       :move="onMove"
   >
-    <PokeCard v-for="(card, cindex) in slotData.cards" :key="card.id" :cardData="card" :top="cindex * 35"/>
+    <PokeCard v-for="(card, cindex) in slotData.cards" :key="card.id" :cardData="card" :top="myTop(cindex) * 35" :position="'bottom'" />
   </draggable>
 </template>
 
@@ -40,6 +40,17 @@ export default {
     }
   },
   methods: {
+    myTop(index) {
+      if (index === 0) return 0;
+      let eleNum = 0;
+      for (let i = 0; i < index; i += 1) {
+        eleNum += 1;
+        if (this.slotData.cards[i].childElement.length > 0) {
+          eleNum = eleNum + this.slotData.cards[i].childElement.length;
+        }
+      }
+      return eleNum;
+    },
     // draggable 套件的 option 設定
     getOptions() {
       return {
