@@ -1,14 +1,14 @@
 <template>
   <ul class="right-tools-bar">
-    <li class="tool" @click="openSelectDialog">
+    <li class="tool" @click="openDialog('SelectLevelDialog')">
       <i><img src="../assets/image/new.svg" width="100%" alt=""></i>
       <div class="text">NEW</div>
     </li>
-    <li class="tool">
+    <li class="tool res" @click="openDialog('RestartDialog')" :class="{ active: isStarted }">
       <i class="reset"><img src="../assets/image/reset.svg" width="100%" alt=""></i>
       <div class="text">RESTAET</div>
     </li>
-    <li class="tool">
+    <li class="tool undo" :class="{ active: moved }">
       <i class="undo"><img src="../assets/image/undo.svg" width="100%" alt=""></i>
       <div class="text">UNDO</div>
     </li>
@@ -17,9 +17,18 @@
 
 <script>
 export default {
+  computed: {
+    isStarted() {
+      return this.$store.state.time > 0;
+    },
+    moved() {
+      return this.$store.state.moveTimes > 0;
+    }
+  },
   methods: {
-    openSelectDialog() {
-      this.$bus.$emit('onOpenDialog', { dialogType: 'SelectLevelDialog' });
+    openDialog(type) {
+      if (type === 'RestartDialog' && !this.isStarted) return;
+      this.$bus.$emit('onOpenDialog', { dialogType: type });
     }
   }
 };
@@ -43,6 +52,24 @@ ul.right-tools-bar {
     transition: .3s;
     &:hover {
       opacity: 0.5;
+    }
+    &.res {
+      opacity: 0.5;
+      &.active {
+        opacity: 1;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+    &.undo {
+      opacity: 0.5;
+      &.active {
+        opacity: 1;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
     }
     i {
       display: inline-block;

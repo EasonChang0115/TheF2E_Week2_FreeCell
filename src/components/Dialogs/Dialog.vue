@@ -7,10 +7,12 @@
 
 <script>
 import SelectLevelDialog from './SelectLevelDialog.vue';
+import RestartDialog from './RestartDialog.vue';
 export default {
   props: ['type'],
   components: {
-    SelectLevelDialog
+    SelectLevelDialog,
+    RestartDialog
   },
   methods: {
     closed() {

@@ -29,7 +29,7 @@
     animation: bounceIn 1.2s;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     .alert-logo {
       width: 135px;
@@ -41,6 +41,7 @@
     h3 {
       font-size: 1.5rem;
       font-weight: bold;
+      text-align: center;
       color: #4B4B4B;
     }
   }
