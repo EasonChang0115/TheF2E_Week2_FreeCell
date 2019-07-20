@@ -6,7 +6,7 @@
         <i class="far fa-clock"></i><span>{{ time | timeformat }}</span>
       </div>
       <div class="time-move">
-        <i class="times">1</i><span>Moves</span>
+        <i class="times">{{ $store.state.moveTimes }}</i><span>Moves</span>
       </div>
     </div>
   </header>

@@ -111,7 +111,8 @@ export default new Vuex.Store({
         }
       ]
     },
-    time: 0
+    time: 0,
+    moveTimes: 0
   },
   mutations: {
     updateBottomPokeSlots(state, { value, name }) {
