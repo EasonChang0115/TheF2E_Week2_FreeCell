@@ -3,6 +3,7 @@
       v-bind="getOptions()"
       :style="{ height: slotHeight + 'px' }"
       v-model="cardLists"
+      @start="onStart"
       @end="onEnd"
       :move="onMove"
   >
@@ -13,8 +14,10 @@
 <script>
 import PokeCard from '@/components/PokeCard.vue';
 import draggable from 'vuedraggable';
+import draggleFunction from '@/mixin/dragFunction.js';
 export default {
   props: ['slotData', 'name'],
+  mixins: [draggleFunction],
   components: {
     PokeCard,
     draggable
@@ -46,20 +49,6 @@ export default {
         sort: false,
         onEnd: this.onEnd
       };
-    },
-    onEnd(option) {
-      // console.log('End');
-      // console.log(option);
-    },
-    onMove(option) {
-      console.log('Move');
-      console.log(option);
-      let dragged = option.dragged;
-      // 如果是目標則重新計算高度
-      if (option.to.className.includes('card_slot')) {
-        let targetSlotListNum = option.relatedContext.list.length;
-        dragged.style.top = targetSlotListNum * 35 + 'px';
-      }
     }
   }
 };

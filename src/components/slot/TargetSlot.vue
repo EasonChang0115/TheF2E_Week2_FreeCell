@@ -1,7 +1,10 @@
 <template>
-  <draggable element="div" class="target-slot"
+  <draggable element="div" class="target_slot"
       v-bind="getOptions()"
       v-model="cardLists"
+      @start="onStart"
+      @end="onEnd"
+      :move="onMove"
   >
     <PokeCard v-for="card in slotData.cards" :key="card.id" :cardData="card" />
   </draggable>
@@ -10,8 +13,10 @@
 <script>
 import PokeCard from '@/components/PokeCard.vue';
 import draggable from 'vuedraggable';
+import draggleFunction from '@/mixin/dragFunction.js';
 export default {
   props: ['slotData', 'name'],
+  mixins: [draggleFunction],
   components: {
     PokeCard,
     draggable
@@ -44,7 +49,7 @@ export default {
 </script>
 
 <style lang="scss">
-.target-slot {
+.target_slot {
   width: 110px;
   height: 160px;
   border: 1px solid white;
