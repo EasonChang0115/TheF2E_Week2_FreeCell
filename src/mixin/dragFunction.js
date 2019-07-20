@@ -1,9 +1,18 @@
+function checkCompletedLoop(parentCards) {
+  if (parentCards.length > 0 && parentCards[0].childElement.length === 1) {
+    return checkCompletedLoop(parentCards[0].childElement) + 1;
+  } else {
+    return 1;
+  }
+}
+
 export default {
   methods: {
     onStart() {},
     onEnd(option) {
       this.checkAllPokeIsFixed();
-      // console.log(this.$store.state.slots.bottomPokeSlots);
+      this.checkCompleted();
+      // console.log(this.$store.state.slots.targetSlots);
     },
     onMove(option) {
       //  都得放最後一個
@@ -28,7 +37,7 @@ export default {
       // 如果是最終插槽 target_slot 則需驗證
       if (targetDom.className.includes('target_slot')) {
         // 當最終插槽沒有東西 而且拖動的物件為 Ａ 的時候可以放
-        if (Number(draggedElementData.number) === 1) return true;
+        if (Number(draggedElementData.number) === 1 && targetSlotsDataList.length === 0) return true;
       }
       // 如果目標是牌插槽
       if (targetDom.className.includes('poke_card')) {
@@ -57,6 +66,12 @@ export default {
           if (index === (array.length - 1)) card.fixed = false;
         });
       });
+    },
+    checkCompleted() {
+      let targetSlots = this.$store.state.slots.targetSlots;
+      if (targetSlots.every(slot => checkCompletedLoop(slot.cards) === 13)) {
+        console.log("completed");
+      }
     }
   }
 };
