@@ -35,7 +35,7 @@ export default {
   },
   methods: {
     onSelectedLevel() {
-      if (this.selectedLevel === null ) return;
+      if (this.selectedLevel === null) return;
       this.$store.dispatch('loadLevelInbottomPokeSlots', { levelData: this.LevelList[this.selectedLevel].slots });
       this.$bus.$emit('closeDialog');
       this.$bus.$emit('onStartGame');

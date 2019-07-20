@@ -22,7 +22,7 @@ export default {
       return this.$store.state.isStarted;
     },
     moved() {
-      return this.$store.state.moveTimes > 0;
+      return this.$store.state.undoState.length > 1;
     }
   },
   methods: {

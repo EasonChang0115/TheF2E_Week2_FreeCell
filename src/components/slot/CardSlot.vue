@@ -40,7 +40,7 @@ export default {
     },
     className() {
       if (this.$store.state.time > 0) return 'poke_card started';
-      else 'poke_card'
+      else return 'poke_card';
     }
   },
   methods: {

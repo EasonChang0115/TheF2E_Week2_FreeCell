@@ -1,7 +1,7 @@
 <template>
-  <draggable element="div" 
-    :class="className" 
-    :data-number="cardData.number" 
+  <draggable element="div"
+    :class="className"
+    :data-number="cardData.number"
     :data-color="cardData.color"
     :data-flower="cardData.flower"
     :data-position="position"
@@ -18,7 +18,7 @@
     @end="onEnd"
     :move="onMove"
   >
-    <PokeCard 
+    <PokeCard
       v-for="card in realValue"
       :key="card.id"
       :className="'poke_card sub_card'"
@@ -34,7 +34,7 @@
 import draggable from 'vuedraggable';
 import draggleFunction from '@/mixin/dragFunction.js';
 export default {
-  name: "PokeCard",
+  name: 'PokeCard',
   props: {
     position: {
       required: false
@@ -68,7 +68,7 @@ export default {
   },
   methods: {
     emitter(value) {
-      this.$emit("input", value);
+      this.$emit('input', value);
     },
     getOptions() {
       return {

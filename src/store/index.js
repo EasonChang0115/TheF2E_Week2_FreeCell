@@ -180,6 +180,7 @@ export default new Vuex.Store({
       };
       state.slots = cloneDeep(clearSlot);
       state.undoState.length = 0;
+      state.moveTimes = 0;
     },
     setTime(state, { value }) {
       state.time = value;
@@ -202,9 +203,11 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    undoAction ({ commit }) {
-      commit('undoCommit');
-      commit('addMoveTimes');
+    undoAction ({ state, commit }) {
+      if (state.undoState.length > 1) {
+        commit('undoCommit');
+        commit('addMoveTimes');
+      }
     },
     restartCurrentGame({ state, commit }) {
       commit('clearAllSlots');
@@ -215,6 +218,6 @@ export default new Vuex.Store({
       initState.slots.bottomPokeSlots = cloneDeep(levelData);
       state.slots.bottomPokeSlots = cloneDeep(levelData);
       state.undoState.push(JSON.stringify(state.slots));
-    },
+    }
   }
 });

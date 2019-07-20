@@ -19,7 +19,7 @@ export default {
       //  都得放最後一個
       if (option.willInsertAfter === false) return false;
       // 移動的牌 Dom
-      let dragged = option.dragged;
+      // let dragged = option.dragged;
       // 移動的牌的資料
       let draggedElementData = option.draggedContext.element;
       if (draggedElementData.fixed === true) return false;
@@ -71,15 +71,14 @@ export default {
     checkCompleted() {
       let targetSlots = this.$store.state.slots.targetSlots;
       if (targetSlots.every(slot => checkCompletedLoop(slot.cards) === 13)) {
-        console.log("completed");
+        console.log('completed');
       }
     },
     checkMoveTimeAndPushUndoState() {
       let undoState = this.$store.state.undoState;
       let parseSlots = JSON.stringify(this.$store.state.slots);
       let lastStep = undoState[undoState.length - 1];
-      if (parseSlots === lastStep) return;
-      else {
+      if (parseSlots !== lastStep) {
         this.$store.commit('addMoveTimes');
         this.$store.commit('addUndoState');
       }
