@@ -79,7 +79,12 @@ export default new Vuex.Store({
           }]
         }, {
           name: 'free3',
-          cards: []
+          cards: [ {
+            id: 'heart_5',
+            number: '5',
+            color: 'red',
+            flower: 'heart'
+          }]
         }, {
           name: 'free4',
           cards: []
@@ -109,13 +114,28 @@ export default new Vuex.Store({
             number: '4',
             color: 'black',
             flower: 'spade'
+          },  {
+            id: 'heart_3',
+            number: '3',
+            color: 'red',
+            flower: 'heart'
           }]
         }, {
           name: 'slot2',
           cards: []
         }, {
           name: 'slot3',
-          cards: []
+          cards: [ {
+            id: 'heart_1',
+            number: '1',
+            color: 'red',
+            flower: 'heart'
+          }, {
+            id: 'heart_4',
+            number: '4',
+            color: 'red',
+            flower: 'heart'
+          }]
         }, {
           name: 'slot4',
           cards: []
@@ -129,7 +149,12 @@ export default new Vuex.Store({
           }]
         }, {
           name: 'slot6',
-          cards: []
+          cards: [{
+            id: 'heart_2',
+            number: '2',
+            color: 'red',
+            flower: 'heart'
+          }]
         }, {
           name: 'slot7',
           cards: []
