@@ -113,7 +113,8 @@ export default new Vuex.Store({
     },
     isStarted: false,
     time: 0,
-    moveTimes: 0
+    moveTimes: 0,
+    undoState: []
   },
   mutations: {
     updateBottomPokeSlots(state, { value, name }) {
@@ -178,15 +179,33 @@ export default new Vuex.Store({
         ]
       };
       state.slots = cloneDeep(clearSlot);
+      state.undoState.length = 0;
     },
     setTime(state, { value }) {
       state.time = value;
     },
     toggleStart(state, { value }) {
       state.isStarted = value;
+    },
+    addUndoState (state) {
+      state.undoState.push(JSON.stringify(state.slots));
+    },
+    undoCommit (state) {
+      if (state.undoState.length > 1) {
+        let lastSlotsState = JSON.parse(state.undoState[state.undoState.length - 2]);
+        state.undoState.pop();
+        state.slots = lastSlotsState;
+      }
+    },
+    addMoveTimes (state) {
+      state.moveTimes += 1;
     }
   },
   actions: {
+    undoAction ({ commit }) {
+      commit('undoCommit');
+      commit('addMoveTimes');
+    },
     restartCurrentGame({ state, commit }) {
       commit('clearAllSlots');
       state.slots.bottomPokeSlots = cloneDeep(initState.slots.bottomPokeSlots);
@@ -195,6 +214,7 @@ export default new Vuex.Store({
       commit('clearAllSlots');
       initState.slots.bottomPokeSlots = cloneDeep(levelData);
       state.slots.bottomPokeSlots = cloneDeep(levelData);
+      state.undoState.push(JSON.stringify(state.slots));
     },
   }
 });

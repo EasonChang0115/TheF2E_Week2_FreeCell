@@ -8,7 +8,7 @@
       <i class="reset"><img src="../assets/image/reset.svg" width="100%" alt=""></i>
       <div class="text">RESTAET</div>
     </li>
-    <li class="tool undo" :class="{ active: moved }">
+    <li class="tool undo" @click="undo" :class="{ active: moved }">
       <i class="undo"><img src="../assets/image/undo.svg" width="100%" alt=""></i>
       <div class="text">UNDO</div>
     </li>
@@ -26,6 +26,10 @@ export default {
     }
   },
   methods: {
+    undo() {
+      if (!this.moved) return;
+      this.$store.dispatch('undoAction');
+    },
     openDialog(type) {
       if (type === 'RestartDialog' && !this.isStarted) return;
       if (type === 'SelectLevelDialog' && this.isStarted) {

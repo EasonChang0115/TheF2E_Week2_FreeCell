@@ -12,6 +12,7 @@ export default {
     onEnd(option) {
       this.checkAllPokeIsFixed();
       this.checkCompleted();
+      this.checkMoveTimeAndPushUndoState();
       // console.log(this.$store.state.slots.targetSlots);
     },
     onMove(option) {
@@ -71,6 +72,16 @@ export default {
       let targetSlots = this.$store.state.slots.targetSlots;
       if (targetSlots.every(slot => checkCompletedLoop(slot.cards) === 13)) {
         console.log("completed");
+      }
+    },
+    checkMoveTimeAndPushUndoState() {
+      let undoState = this.$store.state.undoState;
+      let parseSlots = JSON.stringify(this.$store.state.slots);
+      let lastStep = undoState[undoState.length - 1];
+      if (parseSlots === lastStep) return;
+      else {
+        this.$store.commit('addMoveTimes');
+        this.$store.commit('addUndoState');
       }
     }
   }
