@@ -24,7 +24,7 @@ export default {
     reStartCurrent() {
       this.$store.dispatch('restartCurrentGame');
       this.$bus.$emit('closeDialog');
-      this.$bus.$emit('reStartGame');
+      this.$bus.$emit('onStartGame');
     }
   }
 };

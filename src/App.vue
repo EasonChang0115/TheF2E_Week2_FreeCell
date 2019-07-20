@@ -59,11 +59,6 @@ export default {
       this.dialogOpen = false;
     });
     this.$bus.$on('onStartGame', () => {
-      this.timer = setInterval(() => {
-        this.$store.commit('setTime', { value: this.$store.state.time + 1 });
-      }, 1000);
-    });
-    this.$bus.$on('reStartGame', () => {
       clearInterval(this.timer);
       this.$store.commit('setTime', { value: 0 });
       this.timer = setInterval(() => {
@@ -79,7 +74,6 @@ export default {
     this.$bus.$off('onOpenDialog');
     this.$bus.$off('closeDialog');
     this.$bus.$off('onStartGame');
-    this.$bus.$off('reStartGame');
     this.$bus.$off('onEndGame');
   }
 };
