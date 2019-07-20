@@ -28,7 +28,11 @@ export default {
   methods: {
     openDialog(type) {
       if (type === 'RestartDialog' && !this.isStarted) return;
-      this.$bus.$emit('onOpenDialog', { dialogType: type });
+      if (type === 'SelectLevelDialog' && this.isStarted) {
+        this.$bus.$emit('onOpenDialog', { dialogType: 'NewGameDialog' });
+      } else {
+        this.$bus.$emit('onOpenDialog', { dialogType: type });
+      }
     }
   }
 };

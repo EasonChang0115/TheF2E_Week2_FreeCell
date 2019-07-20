@@ -8,11 +8,14 @@
 <script>
 import SelectLevelDialog from './SelectLevelDialog.vue';
 import RestartDialog from './RestartDialog.vue';
+import NewGameDialog from './NewGameDialog.vue';
+
 export default {
   props: ['type'],
   components: {
     SelectLevelDialog,
-    RestartDialog
+    RestartDialog,
+    NewGameDialog
   },
   methods: {
     closed() {
