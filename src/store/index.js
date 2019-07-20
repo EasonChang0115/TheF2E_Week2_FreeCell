@@ -67,7 +67,8 @@ export default new Vuex.Store({
             id: 'spade_5',
             number: '5',
             color: 'black',
-            flower: 'spade'
+            flower: 'spade',
+            childElement: []
           }]
         }, {
           name: 'free2',
@@ -75,7 +76,8 @@ export default new Vuex.Store({
             id: 'spade_2',
             number: '2',
             color: 'black',
-            flower: 'spade'
+            flower: 'spade',
+            childElement: []
           }]
         }, {
           name: 'free3',
@@ -83,7 +85,8 @@ export default new Vuex.Store({
             id: 'heart_5',
             number: '5',
             color: 'red',
-            flower: 'heart'
+            flower: 'heart',
+            childElement: []
           }]
         }, {
           name: 'free4',
@@ -95,7 +98,8 @@ export default new Vuex.Store({
             id: 'spade_1',
             number: '1',
             color: 'black',
-            flower: 'spade'
+            flower: 'spade',
+            childElement: []
           }]
         }, {
           name: 'target2',
@@ -113,28 +117,32 @@ export default new Vuex.Store({
             id: 'spade_4',
             number: '4',
             color: 'black',
-            flower: 'spade'
+            flower: 'spade',
+            childElement: []
           },  {
             id: 'heart_3',
             number: '3',
             color: 'red',
-            flower: 'heart'
+            flower: 'heart',
+            childElement: []
           }]
         }, {
           name: 'slot2',
           cards: []
         }, {
           name: 'slot3',
-          cards: [ {
-            id: 'heart_1',
-            number: '1',
-            color: 'red',
-            flower: 'heart'
-          }, {
+          cards: [{
             id: 'heart_4',
             number: '4',
             color: 'red',
-            flower: 'heart'
+            flower: 'heart',
+            childElement: [{
+              id: 'heart_1',
+              number: '1',
+              color: 'red',
+              flower: 'heart',
+              childElement: []
+            }]
           }]
         }, {
           name: 'slot4',
@@ -145,7 +153,8 @@ export default new Vuex.Store({
             id: 'spade_3',
             number: '3',
             color: 'black',
-            flower: 'spade'
+            flower: 'spade',
+            childElement: []
           }]
         }, {
           name: 'slot6',
@@ -153,7 +162,8 @@ export default new Vuex.Store({
             id: 'heart_2',
             number: '2',
             color: 'red',
-            flower: 'heart'
+            flower: 'heart',
+            childElement: []
           }]
         }, {
           name: 'slot7',
