@@ -37,6 +37,7 @@ export default {
     onSelectedLevel() {
       this.$store.commit('loadLevelInbottomPokeSlots', { levelData: this.LevelList[this.selectedLevel].slots });
       this.$bus.$emit('closeDialog');
+      this.$bus.$emit('onStartGame');
     }
   }
 };

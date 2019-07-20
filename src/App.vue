@@ -25,6 +25,7 @@ import FreeSlotList from '@/components/slot/FreeSlotList.vue';
 import TargetSlotList from '@/components/slot/TargetSlotList.vue';
 import CardSlotList from '@/components/slot/CardSlotList.vue';
 import Dialog from '@/components/Dialogs/Dialog.vue';
+import { setInterval, clearInterval } from 'timers';
 
 export default {
   mounted() {
@@ -45,7 +46,8 @@ export default {
     return {
       dialogOpen: true,
       dialogType: '',
-      showLoading: true
+      showLoading: true,
+      timer: null
     };
   },
   created() {
@@ -55,6 +57,15 @@ export default {
     });
     this.$bus.$on('closeDialog', () => {
       this.dialogOpen = false;
+    });
+    this.$bus.$on('onStartGame', () => {
+      let timer = setInterval(() => {
+        this.$store.commit('setTime', { value: this.$store.state.time + 1 });
+      }, 1000);
+    });
+    this.$bus.$on('onEndGame', () => {
+      clearInterval(this.timer);
+      this.$store.commit('setTime', { value: 0 });
     });
   },
   destroyed() {

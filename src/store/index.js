@@ -110,7 +110,8 @@ export default new Vuex.Store({
           cards: []
         }
       ]
-    }
+    },
+    time: 0
   },
   mutations: {
     updateBottomPokeSlots(state, { value, name }) {
@@ -125,6 +126,9 @@ export default new Vuex.Store({
     loadLevelInbottomPokeSlots(state, { levelData }) {
       state.slots = cloneDeep(initState.slots);
       state.slots.bottomPokeSlots = cloneDeep(levelData);
+    },
+    setTime(state, { value }) {
+      state.time = value;
     }
   },
   actions: {
