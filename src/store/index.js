@@ -112,6 +112,7 @@ export default new Vuex.Store({
       ]
     },
     isStarted: false,
+    isCompleted: false,
     time: 0,
     moveTimes: 0,
     undoState: []
@@ -200,6 +201,9 @@ export default new Vuex.Store({
     },
     addMoveTimes (state) {
       state.moveTimes += 1;
+    },
+    serCompletedAction(state, { value }) {
+      state.isCompleted = value;
     }
   },
   actions: {

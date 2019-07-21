@@ -8,7 +8,10 @@
         <TargetSlotList />
       </div>
       <div class="bottom_slot">
-        <CardSlotList />
+        <transition name="zoom">
+          <CardSlotList v-if="!$store.state.isCompleted"/>
+          <CompeletedPanel v-else/>
+        </transition>
       </div>
     </div>
     <div class="slide" :class="{open: !showLoading}"><RightToolsBar /></div>
@@ -25,6 +28,7 @@ import FreeSlotList from '@/components/slot/FreeSlotList.vue';
 import TargetSlotList from '@/components/slot/TargetSlotList.vue';
 import CardSlotList from '@/components/slot/CardSlotList.vue';
 import Dialog from '@/components/Dialogs/Dialog.vue';
+import CompeletedPanel from '@/components/CompeletedPanel.vue';
 import { setInterval, clearInterval, setTimeout, clearTimeout } from 'timers';
 
 export default {
@@ -40,7 +44,8 @@ export default {
     FreeSlotList,
     TargetSlotList,
     CardSlotList,
-    Dialog
+    Dialog,
+    CompeletedPanel
   },
   data() {
     return {
@@ -60,9 +65,7 @@ export default {
       this.dialogOpen = false;
     });
     this.$bus.$on('onStartGame', () => {
-      clearInterval(this.timer);
-      this.$store.commit('setTime', { value: 0 });
-      this.$store.commit('toggleStart', { value: false });
+      this.resetGame();
       let countTime = setTimeout(() => {
         this.$store.commit('toggleStart', { value: true });
         this.timer = setInterval(() => {
@@ -71,17 +74,28 @@ export default {
         clearTimeout(countTime);
       }, this.countDown * 1000);
     });
-    this.$bus.$on('onEndGame', () => {
+    this.$bus.$on('onCompletedGame', () => {
       clearInterval(this.timer);
-      this.$store.commit('setTime', { value: 0 });
-      this.$store.commit('toggleStart', { value: false });
+      this.$store.commit('serCompletedAction', { value: true });
+    });
+    this.$bus.$on('onResetGame', () => {
+      this.resetGame();
     });
   },
   destroyed() {
     this.$bus.$off('onOpenDialog');
     this.$bus.$off('closeDialog');
     this.$bus.$off('onStartGame');
-    this.$bus.$off('onEndGame');
+    this.$bus.$off('onCompletedGame');
+    this.$bus.$off('onResetGame');
+  },
+  methods: {
+    resetGame() {
+      clearInterval(this.timer);
+      this.$store.commit('setTime', { value: 0 });
+      this.$store.commit('toggleStart', { value: false });
+      this.$store.commit('serCompletedAction', { value: false });
+    }
   }
 };
 </script>

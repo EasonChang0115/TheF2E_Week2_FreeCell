@@ -72,7 +72,7 @@ export default {
     checkCompleted() {
       let targetSlots = this.$store.state.slots.targetSlots;
       if (targetSlots.every(slot => checkCompletedLoop(slot.cards) === 13)) {
-        console.log('completed');
+        this.$bus.$emit('onCompletedGame');
       }
     },
     checkMoveTimeAndPushUndoState() {
