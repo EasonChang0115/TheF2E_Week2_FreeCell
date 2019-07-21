@@ -31,7 +31,7 @@
             }, {
               "id": "diamond_13",
               "number": 13,
-              "color": "black",
+              "color": "red",
               "flower": "diamond",
               "fixed": true,
               "childElement": []
@@ -864,7 +864,7 @@
             }, {
               "id": "diamond_13",
               "number": 13,
-              "color": "black",
+              "color": "red",
               "flower": "diamond",
               "childElement": []
             }, {

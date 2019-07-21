@@ -6,7 +6,7 @@
       @end="onEnd"
       :move="onMove"
   >
-    <PokeCard v-for="card in slotData.cards" :key="card.id" :cardData="card" :position="'target'"/>
+    <PokeCard v-for="card in slotData.cards" :key="card.id" :cardData="card" :position="'target'" :className="className"/>
   </draggable>
 </template>
 
@@ -22,6 +22,10 @@ export default {
     draggable
   },
   computed: {
+    className() {
+      if (this.$store.state.time > 0) return 'poke_card started';
+      else return 'poke_card';
+    },
     cardLists: {
       get () {
         return this.$store.state.slots.targetSlots.filter(slot => slot.name === this.name)[0].cards;

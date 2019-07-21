@@ -212,6 +212,7 @@ export default new Vuex.Store({
     restartCurrentGame({ state, commit }) {
       commit('clearAllSlots');
       state.slots.bottomPokeSlots = cloneDeep(initState.slots.bottomPokeSlots);
+      state.undoState.push(JSON.stringify(state.slots));
     },
     loadLevelInbottomPokeSlots({ state, commit }, { levelData }) {
       commit('clearAllSlots');

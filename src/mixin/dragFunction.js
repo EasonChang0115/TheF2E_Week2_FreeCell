@@ -50,6 +50,7 @@ export default {
         if (targetDom.getAttribute('data-fixed')) return false;
         if (targetCardPosition === 'free') return false;
         if (targetCardPosition === 'target') {
+          if (draggedElementData.childElement.length > 0) return false;
           if ((targetCardNumber + 1 === Number(draggedElementData.number)) &&
               (targetCardFlower === draggedElementData.flower)) return true;
         }
