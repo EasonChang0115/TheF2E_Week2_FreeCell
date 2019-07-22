@@ -76,7 +76,7 @@ export default {
     });
     this.$bus.$on('onCompletedGame', () => {
       clearInterval(this.timer);
-      this.$store.commit('serCompletedAction', { value: true });
+      this.$store.commit('setCompletedAction', { value: true });
     });
     this.$bus.$on('onResetGame', () => {
       this.resetGame();
@@ -94,7 +94,7 @@ export default {
       clearInterval(this.timer);
       this.$store.commit('setTime', { value: 0 });
       this.$store.commit('toggleStart', { value: false });
-      this.$store.commit('serCompletedAction', { value: false });
+      this.$store.commit('setCompletedAction', { value: false });
     }
   }
 };

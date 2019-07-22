@@ -18,7 +18,7 @@
         this.$bus.$emit('onOpenDialog', { dialogType: 'SelectLevelDialog' });
         this.$bus.$emit('onResetGame');
         this.$store.commit('clearAllSlots');
-        this.$store.commit('serCompletedAction', { value: false });
+        this.$store.commit('setCompletedAction', { value: false });
       }
     }
   };

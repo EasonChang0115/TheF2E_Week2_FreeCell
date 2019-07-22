@@ -36,9 +36,15 @@ export default {
   methods: {
     onSelectedLevel() {
       if (this.selectedLevel === null) return;
-      this.$store.dispatch('loadLevelInbottomPokeSlots', { levelData: this.LevelList[this.selectedLevel].slots });
-      this.$bus.$emit('closeDialog');
-      this.$bus.$emit('onStartGame');
+      if (this.selectedLevel === 'LevelThree') {
+        this.$store.dispatch('loadRandomLevelInbottomPokeSlots');
+        this.$bus.$emit('closeDialog');
+        this.$bus.$emit('onStartGame');
+      } else {
+        this.$store.dispatch('loadLevelInbottomPokeSlots', { levelData: this.LevelList[this.selectedLevel].slots });
+        this.$bus.$emit('closeDialog');
+        this.$bus.$emit('onStartGame');
+      }
     }
   }
 };
