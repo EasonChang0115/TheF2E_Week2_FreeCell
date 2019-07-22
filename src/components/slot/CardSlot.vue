@@ -3,22 +3,24 @@
       v-bind="getOptions()"
       :style="{ height: slotHeight + 'px' }"
       v-model="cardLists"
+      @start="onStart"
+      @end="onEnd"
+      :move="onMove"
   >
-    <PokeCard v-for="(card, cindex) in slotData.cards" :key="card.id" :cardData="card" :top="cindex * 35"/>
+    <PokeCard v-for="(card, cindex) in slotData.cards" :key="card.id" :cardData="card" :top="myTop(cindex) * 35" :position="'bottom'" :className="className"/>
   </draggable>
 </template>
 
 <script>
 import PokeCard from '@/components/PokeCard.vue';
 import draggable from 'vuedraggable';
+import draggleFunction from '@/mixin/dragFunction.js';
 export default {
   props: ['slotData', 'name'],
+  mixins: [draggleFunction],
   components: {
     PokeCard,
     draggable
-  },
-  mounted() {
-    this.viewCardHeightPosition();
   },
   computed: {
     slotHeight() {
@@ -35,29 +37,33 @@ export default {
           name: this.name
         });
       }
+    },
+    className() {
+      if (this.$store.state.time > 0) return 'poke_card started';
+      else return 'poke_card';
     }
   },
   methods: {
+    myTop(index) {
+      if (index === 0) return 0;
+      let eleNum = 0;
+      for (let i = 0; i < index; i += 1) {
+        eleNum += 1;
+        if (this.slotData.cards[i].childElement.length > 0) {
+          eleNum = eleNum + this.slotData.cards[i].childElement.length;
+        }
+      }
+      return eleNum;
+    },
     // draggable 套件的 option 設定
     getOptions() {
       return {
         animation: 150,
-        group: 'description',
-        ghostClass: 'ghost'
+        group: 'cardSlot',
+        ghostClass: 'ghost',
+        sort: false,
+        onEnd: this.onEnd
       };
-    },
-    // 當 slot 被 dragover 時，需要重新計算預設牌的高度
-    viewCardHeightPosition() {
-      let targetAll = document.querySelectorAll('.card_slot');
-      targetAll.forEach(target => target.addEventListener('dragover', function() {
-        let childNodesLength = this.childNodes.length;
-        this.childNodes.forEach(child => {
-          if (child.className.includes('ghost')) {
-            if (childNodesLength === 1 || childNodesLength === 0) child.style.top = '0px';
-            else child.style.top = (childNodesLength - 1) * 35 + 'px';
-          }
-        });
-      }));
     }
   }
 };

@@ -3,10 +3,10 @@
     <div class="logo"></div>
     <div class="information-panel">
       <div class="time-clock">
-        <i class="far fa-clock"></i><span>00:00:00</span>
+        <i class="far fa-clock"></i><span>{{ time | timeformat }}</span>
       </div>
       <div class="time-move">
-        <i class="times">1</i><span>Moves</span>
+        <i class="times">{{ $store.state.moveTimes }}</i><span>Moves</span>
       </div>
     </div>
   </header>
@@ -14,7 +14,11 @@
 
 <script>
   export default {
-
+    computed: {
+      time() {
+        return this.$store.state.time;
+      }
+    }
   };
 </script>
 
