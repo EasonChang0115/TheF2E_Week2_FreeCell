@@ -72,7 +72,5 @@ export default {
 <style lang="scss">
 .card_slot {
   width: 110px;
-  border: 1px dotted rgba(white, 0.2);
-  border-radius: 5px;
 }
 </style>
