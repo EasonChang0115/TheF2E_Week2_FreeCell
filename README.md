@@ -1,29 +1,3 @@
-# freecell
+# week2 FreeCell 新接龍
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[範例頁面](https://easonchang0115.github.io/TheF2E_Week2_FreeCell/dist/)
