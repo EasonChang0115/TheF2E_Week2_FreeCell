@@ -25,7 +25,7 @@ export default {
     reStartCurrent() {
       this.$bus.$emit('closeDialog');
       setTimeout(() => {
-        this.$bus.$emit('onOpenDialog', { dialogType: 'SelectLevelDialog' });
+        this.$bus.$emit('onOpenDialog', { dialogType: "SelectLevelDialog" });
       });
     }
   }
