@@ -7,7 +7,7 @@
       @end="onEnd"
       :move="onMove"
   >
-    <PokeCard v-for="(card, cindex) in slotData.cards" :key="card.id" :cardData="card" :top="myTop(cindex) * 35" :position="'bottom'" :className="className"/>
+    <PokeCard v-for="(card, cindex) in slotData.cards" :key="card.id + card.childElement.length" :cardData="card" :top="myTop(cindex) * 35" :position="'bottom'" :className="className"/>
   </draggable>
 </template>
 

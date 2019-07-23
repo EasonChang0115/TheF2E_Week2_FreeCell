@@ -26,9 +26,18 @@ export default {
     }
   },
   methods: {
+    checkAllPokeIsFixed() {
+      let bottomPokeSlots = this.$store.state.slots.bottomPokeSlots;
+      bottomPokeSlots.forEach(slots => {
+        slots.cards.forEach((card, index, array) => {
+          if (index === (array.length - 1)) card.fixed = false;
+        });
+      });
+    },
     undo() {
       if (!this.moved) return;
       this.$store.dispatch('undoAction');
+      this.checkAllPokeIsFixed();
     },
     openDialog(type) {
       if (type === 'RestartDialog' && !this.isStarted) return;
