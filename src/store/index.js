@@ -242,7 +242,7 @@ export default new Vuex.Store({
       }
       // 修改最最後一張牌的 fixed
       state.slots.bottomPokeSlots.forEach(slots => {
-        slots.cards.forEach((index, card, array) => {
+        slots.cards.forEach((card, index, array) => {
           if (index === array.length - 1) card.fixed = false;
         });
       });
